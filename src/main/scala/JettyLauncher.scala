@@ -6,8 +6,7 @@ import org.scalatra.servlet.ScalatraListener
 
 object JettyLauncher {
     def main(args: Array[String]): Unit = {
-        val portNumber = 8080
-        val port = sys.env.get("PORT").flatMap(_.toIntOption).getOrElse(portNumber)
+        val port = sys.env.get("PORT").flatMap(_.toIntOption).getOrElse(8080)
 
         // Tell Jetty where the webapp directory is
         val context = new WebAppContext("src/main/webapp", "/")

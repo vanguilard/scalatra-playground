@@ -6,6 +6,12 @@ import RevolverPlugin.autoImport._
  */
 val ScalatraVersion = "3.1.2"
 
+/* Environment variables
+ */
+val commonEnvVars = Map(
+    "PORT" -> "8080"
+)
+
 /* Project metadata
  * - Defines organization, name, and version for the project.
  */
@@ -43,19 +49,20 @@ enablePlugins(SbtTwirl)
 /* Configure revolver to use JettyLauncher */
 reStart / mainClass := Some("com.example.JettyLauncher")
 
-// /* Optional: JVM options for revolver */
-// reStart / javaOptions ++= Seq(
-//     "-Xmx1G"
-// )
+/* Optional: JVM options for revolver */
+reStart / javaOptions ++= Seq(
+    "-Xmx1G"
+)
 
-// /* Optional: Environment variables for revolver */
-// reStart / envVars ++= Map(
-//     "PORT" -> "8080"
-// )
+/* Optional: Environment variables for revolver */
+reStart / envVars ++= commonEnvVars
 
 /* Keep existing run configuration (for non-revolver usage) */
 Compile / run / mainClass := Some("com.example.JettyLauncher")
 Compile / run / fork := true
+
+/* Optional: Environment variables for run */
+Compile / run / envVars ++= commonEnvVars
 
 /* Ensure tests run in a separate JVM */
 Test / fork := true
