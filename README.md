@@ -1,7 +1,6 @@
-# scalatra-playground Repository
+# scalatra-playground
 
-## Build & Run
-
+## Build and Run
 ```sh
 # Start docker compose
 cd docker
@@ -11,4 +10,4 @@ docker exec -it scala sh -c "sbt '~reStart'"
 ```
 
 ## Open App
-Go to [http://localhost:8080/](http://localhost:8080/) in your browser.
+Go to [http://localhost:8080](http://localhost:8080) in your browser.
