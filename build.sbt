@@ -10,7 +10,7 @@ val ScalatraVersion = "3.1.2"
  * - Defines organization, name, and version for the project.
  */
 organization := "com.example"
-name := "Scalatra Playground"
+name := "scalatra-playground"
 version := "0.1.0-alpha"
 
 /* Scala compiler version
