@@ -1,3 +1,5 @@
+package com.example
+
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.ee10.webapp.WebAppContext
 import org.scalatra.servlet.ScalatraListener

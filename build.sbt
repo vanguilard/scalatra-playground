@@ -1,3 +1,6 @@
+/* Imports */
+import RevolverPlugin.autoImport._
+
 /* Scalatra version
  * - Defines which version of Scalatra framework to use.
  */
@@ -37,11 +40,22 @@ libraryDependencies ++= Seq(
  */
 enablePlugins(SbtTwirl)
 
-/* Make the embedded Jetty Launcher run via sbt run and specify the main class */
-Compile / mainClass := Some("com.example.JettyLauncher")
+/* Configure revolver to use JettyLauncher */
+reStart / mainClass := Some("com.example.JettyLauncher")
 
-/* Fork the JVM for run so logging and JVM properties don’t interfere */
-Compile / fork := true
+// /* Optional: JVM options for revolver */
+// reStart / javaOptions ++= Seq(
+//     "-Xmx1G"
+// )
+
+// /* Optional: Environment variables for revolver */
+// reStart / envVars ++= Map(
+//     "PORT" -> "8080"
+// )
+
+/* Keep existing run configuration (for non-revolver usage) */
+Compile / run / mainClass := Some("com.example.JettyLauncher")
+Compile / run / fork := true
 
 /* Ensure tests run in a separate JVM */
 Test / fork := true
