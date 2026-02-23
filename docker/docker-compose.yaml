@@ -1,0 +1,24 @@
+name: scala
+
+networks:
+    scala_network:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: "192.168.69.0/24"
+
+services:
+    scala:
+        tty: true
+        container_name: scala
+        hostname: scala
+        image: sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.12.3_2.13.18
+        volumes:
+            - ../:/app:rw
+        working_dir: /app
+        networks:
+            scala_network:
+                ipv4_address: 192.168.69.69
+        ports:
+            - "8080:8080"
+        restart: unless-stopped

@@ -1,0 +1,35 @@
+# SBT/Scala generated files (90% size reduction)
+**/target
+target
+project/target
+.sbt
+*.log
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Docker
+docker
+
+# Git
+.git
+.github/workflows/
+
+# Environment
+.env*
+*.pem
+*.key
+secrets/
+
+# Dependencies (rebuilt in container)
+**/project/boot/
