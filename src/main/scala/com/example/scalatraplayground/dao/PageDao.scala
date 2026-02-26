@@ -1,6 +1,6 @@
-package com.example.scalatraplayground
+package com.example.scalatraplayground.dao
 
-case class Page(slug: String, title: String, summary: String, body: String)
+import com.example.scalatraplayground.entity._
 
 object PageDao {
     val page1 = Page(

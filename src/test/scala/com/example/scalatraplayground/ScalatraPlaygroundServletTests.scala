@@ -1,7 +1,7 @@
-package com.example.scalatra_playground
+package com.example.scalatraplayground
 
 import org.scalatra.test.scalatest._
-import com.example.scalatraplayground.ScalatraPlaygroundServlet
+import com.example.scalatraplayground.controller.ScalatraPlaygroundServlet
 
 class ScalatraPlaygroundServletTests extends ScalatraFunSuite {
 
