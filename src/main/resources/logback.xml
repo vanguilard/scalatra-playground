@@ -8,6 +8,7 @@
     <!-- Suppress noisy Jetty startup messages -->
     <logger name="org.eclipse.jetty.ee10.runner" level="ERROR" />
     <logger name="org.eclipse.jetty.ee10.annotations" level="WARN" />
+    <logger name="org.eclipse.jetty.ee10.webapp.StandardDescriptorProcessor" level="WARN" />
     <logger name="org.apache.tomcat.util.descriptor" level="ERROR" />
 
     <root level="info">
