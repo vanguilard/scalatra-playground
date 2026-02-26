@@ -16,7 +16,7 @@ val commonEnvVars = Map(
  * - Defines organization, name, and version for the project.
  */
 organization := "com.example"
-name := "scalatra-playground"
+name := "scalatraplayground"
 version := "0.1.0-alpha"
 
 /* Scala compiler version

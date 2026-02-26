@@ -1,4 +1,4 @@
-package com.example.scalatra_playground
+package com.example.scalatraplayground
 
 import org.scalatra._
 
