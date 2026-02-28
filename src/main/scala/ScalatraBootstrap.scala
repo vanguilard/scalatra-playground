@@ -4,6 +4,6 @@ import com.example.scalatraplayground.controller._
 
 class ScalatraBootstrap extends LifeCycle {
     override def init(context: ServletContext): Unit = {
-        context.mount(new ScalatraPlaygroundServlet, "/*")
+        context.mount(new ScalatraPlaygroundController, "/*")
     }
 }

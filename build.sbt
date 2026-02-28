@@ -29,8 +29,9 @@ libraryDependencies ++= Seq(
     /* Core Scalatra framework with Jakarta EE 10 support */
     "org.scalatra" %% "scalatra-jakarta" % ScalatraVersion,
 
-    /* Scalatra testing library */
-    "org.scalatra" %% "scalatra-scalatest-jakarta" % ScalatraVersion % "test",
+    /* Testing library */
+    // "org.scalatra" %% "scalatra-scalatest-jakarta" % ScalatraVersion % "test",
+    "org.scalatra" %% "scalatra-specs2-jakarta" % ScalatraVersion % "test",
 
     /* Logback for structured logging
      * - This is your one SLF4J binding (Logback).
